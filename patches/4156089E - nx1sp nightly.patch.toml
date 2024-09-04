@@ -1,0 +1,35 @@
+title_name = "nx1"
+title_id = "4156089E" # 
+hash = "20A25E896EEAD9E3" # 0-Nightly SP maps.sp.xex
+#media_id = "00000000"
+
+[[patch]]
+    name = "120 FPS"
+    desc = "Unlocks vsync, requires vsync = false in Xenia config."
+    author = "Clippy95, Taleb"
+    is_enabled = true
+
+    [[patch.be8]]
+        address = 0x822ED458 # com_maxfps
+        value = 0x78
+    [[patch.be8]]
+        address = 0x824A9860 # r_vsync
+        value = 0x00
+
+[[patch]]
+    name = "Aspect ratio"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82081D94
+        value = 2.38888888889
+
+[[patch]]
+    name = "Skip Blackbox Connect"
+    author = "Tervel, Adrian"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x82345D50
+		value= 0x4E800020
