@@ -73,7 +73,7 @@ hash = "A49321A07235881F" # 2-nx1mp.xex
     name = "Ingame Console Fix"
     desc = "Ingame Console Fix for Xenia keyboard passthrough"
     author = "And799"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8259F284 
