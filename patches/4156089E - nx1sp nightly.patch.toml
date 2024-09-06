@@ -33,3 +33,13 @@ hash = "20A25E896EEAD9E3" # 0-Nightly SP maps.sp.xex
     [[patch.be32]]
         address = 0x82345D50
 		value= 0x4E800020
+
+[[patch]]
+    name = "Stub CompileError"
+	desc = "UNTESTED - Clippy95"
+    author = "and799"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8230E3B0
+		value= 0x4E800020
