@@ -21,3 +21,12 @@ hash = "3C876080C1FFB9AB" # 1-nx1sp.xex
     [[patch.be32]]
         address = 0x8251E97C
         value = 0x6000000
+		
+[[patch]]
+    name = "Aspect ratio"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x821291C4
+        value = 2.38888888889
