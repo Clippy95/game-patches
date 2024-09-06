@@ -46,9 +46,6 @@ hash = "A49321A07235881F" # 2-nx1mp.xex
     [[patch.be16]]
         address = 0x8280762A
         value = 0x02D0
-    [[patch.be8]]
-        address = 0x8280763F
-        value = 0x00
 		
 [[patch]]
     name = "Skip Blackbox Connect"
@@ -73,8 +70,26 @@ hash = "A49321A07235881F" # 2-nx1mp.xex
     name = "Ingame Console Fix"
     desc = "Ingame Console Fix for Xenia keyboard passthrough"
     author = "And799"
-    is_enabled = false
+    is_enabled = true
 
     [[patch.be32]]
         address = 0x8259F284 
         value = 0x6000000
+
+
+[[patch]]
+    name = "Disable Debug OSD"
+    author = "xinerki"
+    is_enabled = true
+
+    [[patch.be8]]
+        address = 0x822412F3 # cg_drawFPS
+        value = 0
+
+    [[patch.be8]]
+        address = 0x82241317 # cg_drawViewpos
+        value = 0
+
+    [[patch.be8]]
+        address = 0x8245313B # com_statmon
+        value = 0

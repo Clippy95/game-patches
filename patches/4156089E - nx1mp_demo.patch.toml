@@ -44,3 +44,19 @@ hash = "CBFAA079004C987F" # 5-nx1mp_demo.xex
         address = 0x824D4736
         value = 0x2000
 
+[[patch]]
+    name = "Disable Debug OSD"
+    author = "xinerki"
+    is_enabled = true
+
+    [[patch.be8]]
+        address = 0x8214C473 # cg_drawFPS
+        value = 0
+
+    [[patch.be8]]
+        address = 0x8214C487 # cg_drawViewpos
+        value = 0
+
+    [[patch.be8]]
+        address = 0x822D9C6B # com_statmon
+        value = 0
