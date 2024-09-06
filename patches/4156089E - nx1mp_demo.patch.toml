@@ -31,7 +31,7 @@ hash = "CBFAA079004C987F" # 5-nx1mp_demo.xex
     is_enabled = true
 
     [[patch.be32]]
-        address = 0x823591B8
+        address = 0x823591B0
         value = 0x4E800020
 		
 [[patch]]
