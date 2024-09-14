@@ -1,0 +1,48 @@
+title_name = "Black Ops 2"
+title_id = "415608C3" #
+hash = "F80FD80AF7BB99AC" # CoDMP.exe
+#media_id = "00000000"
+
+[[patch]]
+    name = "idk"
+    author = "xinerki, hinder"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8263C2CF
+        value = 1
+
+    [[patch.be8]]
+        address = 0x84427D1D
+        value = 1
+
+[[patch]]
+    name = "nop piracy check"
+    author = "xinerki, hinder"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8234F9D4
+        value = 0x60000000
+
+[[patch]]
+    name = "nop LiveStorage process"
+    author = "xinerki, hinder"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x827BD0E0
+        value = 0x60000000
+
+[[patch]]
+    name = "unlocked fps"
+    author = "xinerki, hinder"
+    is_enabled = true
+
+    [[patch.be8]]
+        address = 0x82A7AB8F # r_vsync
+        value = 0
+    
+    [[patch.be8]]
+        address = 0x8251B91F # com_maxfps
+        value = 240
