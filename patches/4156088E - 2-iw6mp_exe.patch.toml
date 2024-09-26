@@ -1,0 +1,58 @@
+title_name = "Modern Warfare 3"
+title_id = "4156088E" #
+hash = "6705EC8F1206F62D" # 2-iw6mp.exe
+#media_id = "00000000"
+
+[[patch]]
+	name = "Nop LiveStorage_CheckWhitelist"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be32]]
+		address = 0x8287EF0C
+		value = 0x60000000
+
+[[patch]]
+	name = "Unlocked FPS"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be8]]
+		address = 0x8297C947 # r_vsync
+		value = 0
+    
+	[[patch.be8]]
+		address = 0x82691187 # com_maxfps
+		value = 240
+
+[[patch]]
+	name = "Fix Console Input"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be32]]
+		address = 0x82877BCC
+		value = 0x60000000
+
+[[patch]]
+	name = "Fix Intro Movie"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be8]]
+		address = 0x8269144B # intro
+		value = 1
+
+	[[patch.be8]]
+		address = 0x8269609F # com_attractmode
+		value = 1
+
+[[patch]]
+    name = "Force 720p"
+    desc = "Makes the game run at 1280x720 instead of the default 1024x600"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8297B707
+        value = 0x01
