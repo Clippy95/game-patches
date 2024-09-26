@@ -1,0 +1,48 @@
+title_name = "Modern Warfare 3"
+title_id = "4156088E"
+hash = "AE9057141F43A9EC" # 6-iw6mp_fast_server.exe
+#media_id = "00000000"
+
+[[patch]]
+	name = "Nop LiveStorage_CheckWhitelist"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be32]]
+		address = 0x8288B20C
+		value = 0x60000000
+
+[[patch]]
+	name = "Unlocked FPS"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be8]]
+		address = 0x8298953F # r_vsync
+		value = 0
+    
+	[[patch.be8]]
+		address = 0x826BF9AF # com_maxfps
+		value = 240
+
+[[patch]]
+	name = "Fix Console Input"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be32]]
+		address = 0x82883ECC
+		value = 0x60000000
+
+[[patch]]
+	name = "Fix Intro Movie"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be8]]
+		address = 0x826BFC73 # intro
+		value = 1
+
+	[[patch.be8]]
+		address = 0x826C48F7 # com_attractmode
+		value = 1

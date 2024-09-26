@@ -1,0 +1,39 @@
+title_name = "Modern Warfare 3"
+title_id = "4156088E" #
+hash = "C8D024E99AD31FE4" # 4-iw6sp_demo.exe
+#media_id = "00000000"
+
+[[patch]]
+	name = "Unlocked FPS"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be8]]
+		address = 0x8256B323 # r_vsync
+		value = 0
+    
+	[[patch.be8]]
+		address = 0x823F29F3 # com_maxfps
+		value = 240
+
+[[patch]]
+	name = "Fix Console Input"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be32]]
+		address = 0x824A8984
+		value = 0x60000000
+
+[[patch]]
+	name = "Fix Intro Movie"
+	author = "hindercanrun"
+	is_enabled = true
+
+	[[patch.be8]]
+		address = 0x823F2C93 # intro
+		value = 1
+
+	[[patch.be8]]
+		address = 0x823F608B # com_attractmode
+		value = 1
