@@ -128,7 +128,7 @@ hash = [
 
 [[patch]]
     name = "Enable Debug Console"
-    desc = "Requires keyboard_passthru to be changed from false to true in the Xenia Canary config; Requires Xenia Canary version 271befc from January 25th or older."
+    desc = "Requires keyboard_passthru_user_index to be changed from -1 to 0 in the Xenia Canary config."
     author = "emoose"
     is_enabled = false
 
