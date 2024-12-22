@@ -1,0 +1,22 @@
+title_name = "Black Ops 2 DLC 5 build"
+title_id = "415608C3" #
+hash = "113CAACBA98BB80C" # CoDMP_patched.exe
+#media_id = "00000000"
+
+[[patch]]
+    name = "Skip track_static_alloc_internal call in main"
+    author = "hindercanrun"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x82730670
+        value = 0x60000000
+
+[[patch]]
+    name = "Aspect Ratio"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x8221CA08
+        value = 2.38888888889
